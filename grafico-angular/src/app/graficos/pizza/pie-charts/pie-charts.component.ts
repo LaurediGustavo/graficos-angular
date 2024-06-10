@@ -69,4 +69,47 @@ export class PieChartsComponent {
     }
   };
 
+  dataLineChart = {
+    labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
+    datasets: [
+      {
+        label: 'Transferência Internacional',
+        backgroundColor: '#00D8FF',
+        borderColor: '#00D8FF',
+        pointBackgroundColor: '#00D8FF',
+        pointBorderColor: '#00D8FF',
+        data: [40, 20, 12, 39, 10, 20, 0, 0 ,0 ,0 ,0 ,0]
+      },
+      {
+        label: 'Importação',
+        backgroundColor: '#E46651',
+        borderColor: '#E46651',
+        pointBackgroundColor: '#E46651',
+        pointBorderColor: '#E46651',
+        data: [50, 12, 28, 29, 7, 25, 0, 0 ,0 ,0 ,0 ,0]
+      },
+      {
+        label: 'Exportação',
+        backgroundColor: '#d9f827',
+        borderColor: '#d9f827',
+        pointBackgroundColor: '#d9f827',
+        pointBorderColor: '#d9f827',
+        data: [2, 3, 6, 9, 7, 5, 0, 0 ,0 ,0 ,0 ,0]
+      },
+      {
+        label: 'Moeda em Espécie',
+        backgroundColor: '#41B883',
+        borderColor: '#41B883',
+        pointBackgroundColor: '#41B883',
+        pointBorderColor: '#41B883',
+        data: [23, 3, 0, 4, 34, 3, 0, 0 ,0 ,0 ,0 ,0]
+      }
+    ]
+  };
+
+  chartOptions: ChartOptions = {
+    responsive: true,
+    maintainAspectRatio: false
+  };
+
 }

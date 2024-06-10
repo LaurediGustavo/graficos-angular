@@ -1,3 +1,9 @@
+.container-dashboar {
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+
 h2 {
     font-size: 0.8em;
     text-align: center;
@@ -5,20 +11,43 @@ h2 {
 }
 
 .container-produtos-doughnut {
+    padding: 20px;
     width: 30%;
-    height: auto;
-    margin: auto;
-    margin-bottom: 30px;
 }
 
 .container-todos-produtos {
+    padding: 20px;
+    width: 70%;
+}
+
+.container-title-pie-produto {
+    position: relative;
+    height: 20%;
+}
+
+.title-bottom {
+    position: absolute;
+    bottom: 0;
     width: 100%;
-    height: auto;
+    text-align: center;
+    font-size: 1em;
+}
+
+.container-pie {
+    width: 100%;
+    height: 65%;
     display: flex;
 }
 
-.container-pie-transferencia-internacional {
-    width: 15%;
-    height: auto;
+.container-pie-produto {
+    width: 20%;
     margin: auto;
+}
+
+.container-line-chart {
+    margin-top: 10px;
+}
+
+.tamanho-h2 {
+    font-size: 1em;
 }
