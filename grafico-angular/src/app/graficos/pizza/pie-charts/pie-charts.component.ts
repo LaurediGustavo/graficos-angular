@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, Inject } from '@angular/core';
 import { ChartjsComponent } from '@coreui/angular-chartjs';
 import { ChartOptions } from 'chart.js';
+import { DOCUMENT } from '@angular/common';
 
 @Component({
   selector: 'app-pie-charts',
@@ -9,7 +10,7 @@ import { ChartOptions } from 'chart.js';
   templateUrl: './pie-charts.component.html',
   styleUrl: './pie-charts.component.css'
 })
-export class PieChartsComponent {
+export class PieChartsComponent implements AfterViewInit {
 
   dataProdutos = {
     labels: ['Transferência Internacional', 'Importação', 'Exportação', 'Moeda em Espécie'],
@@ -111,5 +112,16 @@ export class PieChartsComponent {
     responsive: true,
     maintainAspectRatio: false
   };
+
+  constructor(@Inject(DOCUMENT) private document: Document) {}
+  
+  ngAfterViewInit() {
+    setTimeout(() => {
+      const chartElement = this.document.querySelector('#c-chartjs-5');
+      if (chartElement && chartElement instanceof HTMLElement) {
+          chartElement.style.height = '300px';
+      }
+    }, 50);
+}
 
 }
