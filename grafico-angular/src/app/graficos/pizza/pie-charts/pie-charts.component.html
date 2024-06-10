@@ -1,0 +1,45 @@
+<p>pie-charts works!</p>
+
+<div class="container-produtos-doughnut">
+    <h2>Produtos</h2>
+    <c-chart 
+        [data]="dataProdutos" 
+        [options]="options"
+        type="doughnut" 
+    />
+</div>
+
+<div class="container-todos-produtos">
+    <div class="container-pie-transferencia-internacional">
+        <h2>Transfêrencia Internacional</h2>
+        <c-chart 
+            [data]="dataTransferenciaInternacional" 
+            [options]="options"
+            type="pie" 
+        />
+    </div>
+    <div class="container-pie-transferencia-internacional">
+        <h2>Importação</h2>
+        <c-chart 
+            [data]="dataImportacao" 
+            [options]="options"
+            type="pie" 
+        />
+    </div>
+    <div class="container-pie-transferencia-internacional">
+        <h2>Exportação</h2>
+        <c-chart 
+            [data]="dataExportacao" 
+            [options]="options"
+            type="pie" 
+        />
+    </div>
+    <div class="container-pie-transferencia-internacional">
+        <h2>Moeda em Espécie</h2>
+        <c-chart 
+            [data]="dataMoedaEmEspecie" 
+            [options]="options"
+            type="pie" 
+        />
+    </div>
+</div>
