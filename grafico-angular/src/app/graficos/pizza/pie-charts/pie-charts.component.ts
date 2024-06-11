@@ -66,6 +66,25 @@ export class PieChartsComponent implements AfterViewInit {
           boxWidth: 10,
           padding: 10,
         }
+      },
+      tooltip: {
+        callbacks: {
+          title: function() {
+            return '';
+          },
+          label: function(tooltipItem: any) {
+            let label = tooltipItem.label || '';
+            if (label) {
+              label += ': ';
+            }
+            const value = tooltipItem.raw as number;
+            label += 'R$ ' + value.toFixed(2);
+            return label;
+          }
+        },
+        bodyFont: {
+          size: 0.5
+        }
       }
     }
   };
@@ -119,9 +138,9 @@ export class PieChartsComponent implements AfterViewInit {
     setTimeout(() => {
       const chartElement = this.document.querySelector('#c-chartjs-5');
       if (chartElement && chartElement instanceof HTMLElement) {
-          chartElement.style.height = '300px';
+          chartElement.style.height = '250px';
       }
-    }, 50);
+    }, 100);
 }
 
 }
